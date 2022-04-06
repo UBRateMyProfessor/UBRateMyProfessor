@@ -68,6 +68,26 @@ App that allows students to rate their professors, and be able to see a list of 
 [This section will be completed in Unit 9]
 ### Models
 [Add table of models]
+
+### Professor
+| Property       | Type       | Description                          |
+| -------------- | ---------- | ------------------------------------ |
+| professorName  | string     | Name of the professor                |
+| ratings        | Rating\[\] | all of the ratings for the professor |
+| courses        | string\[\] | List of course names                 |
+| departmentName | string     | The Professor’s Department           |
+| ratingVal      | float      | Professor’s overall rating           |
+
+### Rating 
+| Property    | Type                      | Description                        |
+| ----------- | ------------------------- | ---------------------------------- |
+| ratingValue | float                     | Overall rating in stars            |
+| courseTaken | string                    | The course id taken                |
+| comment     | string                    | The actual comment in the rating   |
+| dateMade    | DateTime ( or string idk) | The published date of the comment  |
+
+
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
