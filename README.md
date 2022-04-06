@@ -89,6 +89,30 @@ App that allows students to rate their professors, and be able to see a list of 
 
 
 ### Networking
-- [Add list of network requests by screen ]
+
+#### Network Requests by screen
+
+### Department Search : 
+ -
+GET “<department search>” in list of professors
+
+### Course Search : 
+ -
+GET “<course num search>” in list of professors
+
+### Prof Search :
+-
+GET “<prof name>” in list of Professors
+
+### Prof Screen:
+-
+GET all ratings from professor in list
+
+Rating Screen:
+-
+POST new rating object to server for that professor
+  
+  
+
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
