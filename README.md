@@ -94,15 +94,15 @@ App that allows students to rate their professors, and be able to see a list of 
 
 ### Department Search : 
  -
-GET “<department search>” in list of professors
+GET “department search” in list of professors
 
 ### Course Search : 
  -
-GET “<course num search>” in list of professors
+GET “course num search” in list of professors
 
 ### Prof Search :
 -
-GET “<prof name>” in list of Professors
+GET “prof name” in list of Professors
 
 ### Prof Screen:
 -
