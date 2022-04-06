@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00E9F5D434AA2CEE9CB00F59 /* Pods_UBRateMyProfTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CD2BB2066EE4B84C546B9 /* Pods_UBRateMyProfTests.framework */; };
 		0213FA2E27FE464C00A578F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0213FA2D27FE464C00A578F9 /* AppDelegate.swift */; };
 		0213FA3027FE464C00A578F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0213FA2F27FE464C00A578F9 /* SceneDelegate.swift */; };
 		0213FA3227FE464C00A578F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0213FA3127FE464C00A578F9 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 		0213FA4527FE465100A578F9 /* UBRateMyProfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0213FA4427FE465100A578F9 /* UBRateMyProfTests.swift */; };
 		0213FA4F27FE465100A578F9 /* UBRateMyProfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0213FA4E27FE465100A578F9 /* UBRateMyProfUITests.swift */; };
 		0213FA5127FE465100A578F9 /* UBRateMyProfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0213FA5027FE465100A578F9 /* UBRateMyProfUITestsLaunchTests.swift */; };
+		2320A353FBD033CF5E7469ED /* Pods_UBRateMyProf_UBRateMyProfUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7047D50CB8CB6F344E674AF /* Pods_UBRateMyProf_UBRateMyProfUITests.framework */; };
+		E4C90B94C72FC8107C072C40 /* Pods_UBRateMyProf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A62994746136BFFACB500B /* Pods_UBRateMyProf.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,15 @@
 		0213FA4A27FE465100A578F9 /* UBRateMyProfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UBRateMyProfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0213FA4E27FE465100A578F9 /* UBRateMyProfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBRateMyProfUITests.swift; sourceTree = "<group>"; };
 		0213FA5027FE465100A578F9 /* UBRateMyProfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBRateMyProfUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3D35F0FC5181C4F483FD5F9C /* Pods-UBRateMyProf-UBRateMyProfUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProf-UBRateMyProfUITests.release.xcconfig"; path = "Target Support Files/Pods-UBRateMyProf-UBRateMyProfUITests/Pods-UBRateMyProf-UBRateMyProfUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4D426A4D8210B8A92A15BE1D /* Pods-UBRateMyProf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProf.debug.xcconfig"; path = "Target Support Files/Pods-UBRateMyProf/Pods-UBRateMyProf.debug.xcconfig"; sourceTree = "<group>"; };
+		5ACD38B82EFBE1A50A6B712D /* Pods-UBRateMyProfTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProfTests.debug.xcconfig"; path = "Target Support Files/Pods-UBRateMyProfTests/Pods-UBRateMyProfTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6DAE6D998C0EAE4BF0B6C85C /* Pods-UBRateMyProf-UBRateMyProfUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProf-UBRateMyProfUITests.debug.xcconfig"; path = "Target Support Files/Pods-UBRateMyProf-UBRateMyProfUITests/Pods-UBRateMyProf-UBRateMyProfUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C13CD2BB2066EE4B84C546B9 /* Pods_UBRateMyProfTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBRateMyProfTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1A62994746136BFFACB500B /* Pods_UBRateMyProf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBRateMyProf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7047D50CB8CB6F344E674AF /* Pods_UBRateMyProf_UBRateMyProfUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBRateMyProf_UBRateMyProfUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBC76CAC36150422A6146235 /* Pods-UBRateMyProf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProf.release.xcconfig"; path = "Target Support Files/Pods-UBRateMyProf/Pods-UBRateMyProf.release.xcconfig"; sourceTree = "<group>"; };
+		F8E004C129A4327A6613F18C /* Pods-UBRateMyProfTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProfTests.release.xcconfig"; path = "Target Support Files/Pods-UBRateMyProfTests/Pods-UBRateMyProfTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C90B94C72FC8107C072C40 /* Pods_UBRateMyProf.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E9F5D434AA2CEE9CB00F59 /* Pods_UBRateMyProfTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2320A353FBD033CF5E7469ED /* Pods_UBRateMyProf_UBRateMyProfUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				0213FA4327FE465100A578F9 /* UBRateMyProfTests */,
 				0213FA4D27FE465100A578F9 /* UBRateMyProfUITests */,
 				0213FA2B27FE464C00A578F9 /* Products */,
+				775DAA60B768DCC4F8B7242C /* Pods */,
+				5E560E0E556379CA1012F19F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +144,30 @@
 			path = UBRateMyProfUITests;
 			sourceTree = "<group>";
 		};
+		5E560E0E556379CA1012F19F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1A62994746136BFFACB500B /* Pods_UBRateMyProf.framework */,
+				D7047D50CB8CB6F344E674AF /* Pods_UBRateMyProf_UBRateMyProfUITests.framework */,
+				C13CD2BB2066EE4B84C546B9 /* Pods_UBRateMyProfTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		775DAA60B768DCC4F8B7242C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D426A4D8210B8A92A15BE1D /* Pods-UBRateMyProf.debug.xcconfig */,
+				EBC76CAC36150422A6146235 /* Pods-UBRateMyProf.release.xcconfig */,
+				6DAE6D998C0EAE4BF0B6C85C /* Pods-UBRateMyProf-UBRateMyProfUITests.debug.xcconfig */,
+				3D35F0FC5181C4F483FD5F9C /* Pods-UBRateMyProf-UBRateMyProfUITests.release.xcconfig */,
+				5ACD38B82EFBE1A50A6B712D /* Pods-UBRateMyProfTests.debug.xcconfig */,
+				F8E004C129A4327A6613F18C /* Pods-UBRateMyProfTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0213FA5427FE465100A578F9 /* Build configuration list for PBXNativeTarget "UBRateMyProf" */;
 			buildPhases = (
+				D1D047D9F46BAAB9F6EC10CB /* [CP] Check Pods Manifest.lock */,
 				0213FA2627FE464C00A578F9 /* Sources */,
 				0213FA2727FE464C00A578F9 /* Frameworks */,
 				0213FA2827FE464C00A578F9 /* Resources */,
+				6A9BD849BDA6E6FB750D28F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0213FA5727FE465100A578F9 /* Build configuration list for PBXNativeTarget "UBRateMyProfTests" */;
 			buildPhases = (
+				1B6B9028F6486CF8A42B590A /* [CP] Check Pods Manifest.lock */,
 				0213FA3C27FE465100A578F9 /* Sources */,
 				0213FA3D27FE465100A578F9 /* Frameworks */,
 				0213FA3E27FE465100A578F9 /* Resources */,
@@ -169,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0213FA5A27FE465100A578F9 /* Build configuration list for PBXNativeTarget "UBRateMyProfUITests" */;
 			buildPhases = (
+				256F2307A33F8C1BB856084B /* [CP] Check Pods Manifest.lock */,
 				0213FA4627FE465100A578F9 /* Sources */,
 				0213FA4727FE465100A578F9 /* Frameworks */,
 				0213FA4827FE465100A578F9 /* Resources */,
+				A5468009FAAC95C9D47D8EAE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +298,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B6B9028F6486CF8A42B590A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UBRateMyProfTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		256F2307A33F8C1BB856084B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UBRateMyProf-UBRateMyProfUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A9BD849BDA6E6FB750D28F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UBRateMyProf/Pods-UBRateMyProf-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UBRateMyProf/Pods-UBRateMyProf-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UBRateMyProf/Pods-UBRateMyProf-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5468009FAAC95C9D47D8EAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UBRateMyProf-UBRateMyProfUITests/Pods-UBRateMyProf-UBRateMyProfUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UBRateMyProf-UBRateMyProfUITests/Pods-UBRateMyProf-UBRateMyProfUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UBRateMyProf-UBRateMyProfUITests/Pods-UBRateMyProf-UBRateMyProfUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1D047D9F46BAAB9F6EC10CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UBRateMyProf-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0213FA2627FE464C00A578F9 /* Sources */ = {
@@ -432,6 +581,7 @@
 		};
 		0213FA5527FE465100A578F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D426A4D8210B8A92A15BE1D /* Pods-UBRateMyProf.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -460,6 +610,7 @@
 		};
 		0213FA5627FE465100A578F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBC76CAC36150422A6146235 /* Pods-UBRateMyProf.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +639,7 @@
 		};
 		0213FA5827FE465100A578F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ACD38B82EFBE1A50A6B712D /* Pods-UBRateMyProfTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +660,7 @@
 		};
 		0213FA5927FE465100A578F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8E004C129A4327A6613F18C /* Pods-UBRateMyProfTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +681,7 @@
 		};
 		0213FA5B27FE465100A578F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DAE6D998C0EAE4BF0B6C85C /* Pods-UBRateMyProf-UBRateMyProfUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +700,7 @@
 		};
 		0213FA5C27FE465100A578F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D35F0FC5181C4F483FD5F9C /* Pods-UBRateMyProf-UBRateMyProfUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
