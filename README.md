@@ -94,20 +94,92 @@ App that allows students to rate their professors, and be able to see a list of 
 
 ### Department Search : 
  - GET “department search” in list of professors
+```swift
+// (Read/GET) GET “department search” in list of professors
+let query = PFQuery(className:"professor")
+query.whereKey("department", equalTo: departmentSearchText)
+query.order(byDescending: "Name")
+query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+   if let error = error {
+      print(error.localizedDescription)
+   } else if let posts = posts {
+      print("Successfully retrieved \(professors.count) professors.")
+      // TODO: Do something with posts...
+   }
+}
+```
 
 ### Course Search : 
  - GET “course num search” in list of professors
 
+```swift
+// (Read/GET) GET “course search” in list of professors
+let query = PFQuery(className:"professor")
+query.whereKey("courses", equalTo: courseSearch)
+query.order(byDescending: "Name")
+query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+   if let error = error {
+      print(error.localizedDescription)
+   } else if let posts = posts {
+      print("Successfully retrieved \(professors.count) professors.")
+      // TODO: Do something with posts...
+   }
+}
+```
 ### Prof Search :
 - GET “prof name” in list of Professors
-
+```swift
+// (Read/GET) GET “name” in list of professors
+let query = PFQuery(className:"professor")
+query.whereKey("name", equalTo: nameSearch)
+query.order(byDescending: "Name")
+query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+   if let error = error {
+      print(error.localizedDescription)
+   } else if let posts = posts {
+      print("Successfully retrieved \(professors.count) professors.")
+      // TODO: Do something with posts...
+   }
+}
+```
 ### Prof Screen:
 - GET all ratings from professor in list
+```swift
+// (Read/GET) GET “rating” in list of professors
+let query = PFQuery(className:"rating")
+query.whereKey("professor", equalTo: professor)
+query.order(byDescending: "datePosted")
+query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+   if let error = error {
+      print(error.localizedDescription)
+   } else if let posts = posts {
+      print("Successfully retrieved \(professors.count) professors.")
+      // TODO: Do something with posts...
+   }
+}
+```
 
 Rating Screen:
 - POST new rating object to server for that professor
   
-  
+```swift
+        let today = Date()
+        let post = PFObject(className: "Rating")
+        let rating = Rating()   
+        post["dateUploaded"] = today
+        post["caption"] = commentField.text!
+        post["rating"] = overallRating.value!
+        
+        post.saveInBackground {(success, error) in
+            if success {
+                print("Saved post successfully")
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                print("Error saving post: \(String(describing: error?.localizedDescription))")
+            }
+            
+        }
+```        
 
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
