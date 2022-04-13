@@ -16,6 +16,8 @@
 		0213FA4527FE465100A578F9 /* UBRateMyProfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0213FA4427FE465100A578F9 /* UBRateMyProfTests.swift */; };
 		0213FA4F27FE465100A578F9 /* UBRateMyProfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0213FA4E27FE465100A578F9 /* UBRateMyProfUITests.swift */; };
 		0213FA5127FE465100A578F9 /* UBRateMyProfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0213FA5027FE465100A578F9 /* UBRateMyProfUITestsLaunchTests.swift */; };
+		024819FC2807775200231214 /* Professor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024819FB2807775200231214 /* Professor.swift */; };
+		024819FE2807783700231214 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024819FD2807783700231214 /* Rating.swift */; };
 		2320A353FBD033CF5E7469ED /* Pods_UBRateMyProf_UBRateMyProfUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7047D50CB8CB6F344E674AF /* Pods_UBRateMyProf_UBRateMyProfUITests.framework */; };
 		E4C90B94C72FC8107C072C40 /* Pods_UBRateMyProf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A62994746136BFFACB500B /* Pods_UBRateMyProf.framework */; };
 		E61091FF280640A300034630 /* ProfessorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61091FE280640A300034630 /* ProfessorViewController.swift */; };
@@ -52,6 +54,8 @@
 		0213FA4A27FE465100A578F9 /* UBRateMyProfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UBRateMyProfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0213FA4E27FE465100A578F9 /* UBRateMyProfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBRateMyProfUITests.swift; sourceTree = "<group>"; };
 		0213FA5027FE465100A578F9 /* UBRateMyProfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UBRateMyProfUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		024819FB2807775200231214 /* Professor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Professor.swift; sourceTree = "<group>"; };
+		024819FD2807783700231214 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		3D35F0FC5181C4F483FD5F9C /* Pods-UBRateMyProf-UBRateMyProfUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProf-UBRateMyProfUITests.release.xcconfig"; path = "Target Support Files/Pods-UBRateMyProf-UBRateMyProfUITests/Pods-UBRateMyProf-UBRateMyProfUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4D426A4D8210B8A92A15BE1D /* Pods-UBRateMyProf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProf.debug.xcconfig"; path = "Target Support Files/Pods-UBRateMyProf/Pods-UBRateMyProf.debug.xcconfig"; sourceTree = "<group>"; };
 		5ACD38B82EFBE1A50A6B712D /* Pods-UBRateMyProfTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProfTests.debug.xcconfig"; path = "Target Support Files/Pods-UBRateMyProfTests/Pods-UBRateMyProfTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 		0213FA2C27FE464C00A578F9 /* UBRateMyProf */ = {
 			isa = PBXGroup;
 			children = (
+				024819FA2807770700231214 /* Models */,
 				0213FA2D27FE464C00A578F9 /* AppDelegate.swift */,
 				0213FA2F27FE464C00A578F9 /* SceneDelegate.swift */,
 				0213FA3327FE464C00A578F9 /* Main.storyboard */,
@@ -145,6 +150,15 @@
 				0213FA5027FE465100A578F9 /* UBRateMyProfUITestsLaunchTests.swift */,
 			);
 			path = UBRateMyProfUITests;
+			sourceTree = "<group>";
+		};
+		024819FA2807770700231214 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				024819FB2807775200231214 /* Professor.swift */,
+				024819FD2807783700231214 /* Rating.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5E560E0E556379CA1012F19F /* Frameworks */ = {
@@ -409,8 +423,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024819FE2807783700231214 /* Rating.swift in Sources */,
 				E6109201280643C100034630 /* RatingCell.swift in Sources */,
 				0213FA2E27FE464C00A578F9 /* AppDelegate.swift in Sources */,
+				024819FC2807775200231214 /* Professor.swift in Sources */,
 				E61091FF280640A300034630 /* ProfessorViewController.swift in Sources */,
 				0213FA3027FE464C00A578F9 /* SceneDelegate.swift in Sources */,
 			);
