@@ -27,9 +27,12 @@ App that allows students to rate their professors, and be able to see a list of 
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-
-* User can search for professors
-* User can rate professors
+* API Set up [~]
+* User can search for professors [~]
+* User can rate professors []
+* User can see professor rating [~]
+* User can search by courses []
+* User can search by department []
 
 
 **Optional Nice-to-have Stories**
@@ -43,10 +46,10 @@ App that allows students to rate their professors, and be able to see a list of 
    * [User can search for professors]
    * ...
 * [Professor Screen]
-   * [list associated required story here]
+   * [User can see professor ratings]
    * ...
 * [Rating Screen]
-   * [list associated required story here]
+   * [User can leave rating on professor]
    * ...
 ### 3. Navigation
 
