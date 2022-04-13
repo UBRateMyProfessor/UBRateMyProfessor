@@ -10,7 +10,6 @@
 		00E9F5D434AA2CEE9CB00F59 /* Pods_UBRateMyProfTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13CD2BB2066EE4B84C546B9 /* Pods_UBRateMyProfTests.framework */; };
 		0213FA2E27FE464C00A578F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0213FA2D27FE464C00A578F9 /* AppDelegate.swift */; };
 		0213FA3027FE464C00A578F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0213FA2F27FE464C00A578F9 /* SceneDelegate.swift */; };
-		0213FA3227FE464C00A578F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0213FA3127FE464C00A578F9 /* ViewController.swift */; };
 		0213FA3527FE464C00A578F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0213FA3327FE464C00A578F9 /* Main.storyboard */; };
 		0213FA3727FE465100A578F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0213FA3627FE465100A578F9 /* Assets.xcassets */; };
 		0213FA3A27FE465100A578F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0213FA3827FE465100A578F9 /* LaunchScreen.storyboard */; };
@@ -19,6 +18,8 @@
 		0213FA5127FE465100A578F9 /* UBRateMyProfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0213FA5027FE465100A578F9 /* UBRateMyProfUITestsLaunchTests.swift */; };
 		2320A353FBD033CF5E7469ED /* Pods_UBRateMyProf_UBRateMyProfUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7047D50CB8CB6F344E674AF /* Pods_UBRateMyProf_UBRateMyProfUITests.framework */; };
 		E4C90B94C72FC8107C072C40 /* Pods_UBRateMyProf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A62994746136BFFACB500B /* Pods_UBRateMyProf.framework */; };
+		E61091FF280640A300034630 /* ProfessorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61091FE280640A300034630 /* ProfessorViewController.swift */; };
+		E6109201280643C100034630 /* RatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6109200280643C100034630 /* RatingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,6 @@
 		0213FA2A27FE464C00A578F9 /* UBRateMyProf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UBRateMyProf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0213FA2D27FE464C00A578F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0213FA2F27FE464C00A578F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0213FA3127FE464C00A578F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0213FA3427FE464C00A578F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0213FA3627FE465100A578F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0213FA3927FE465100A578F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +59,8 @@
 		C13CD2BB2066EE4B84C546B9 /* Pods_UBRateMyProfTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBRateMyProfTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A62994746136BFFACB500B /* Pods_UBRateMyProf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBRateMyProf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7047D50CB8CB6F344E674AF /* Pods_UBRateMyProf_UBRateMyProfUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBRateMyProf_UBRateMyProfUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E61091FE280640A300034630 /* ProfessorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorViewController.swift; sourceTree = "<group>"; };
+		E6109200280643C100034630 /* RatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCell.swift; sourceTree = "<group>"; };
 		EBC76CAC36150422A6146235 /* Pods-UBRateMyProf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProf.release.xcconfig"; path = "Target Support Files/Pods-UBRateMyProf/Pods-UBRateMyProf.release.xcconfig"; sourceTree = "<group>"; };
 		F8E004C129A4327A6613F18C /* Pods-UBRateMyProfTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProfTests.release.xcconfig"; path = "Target Support Files/Pods-UBRateMyProfTests/Pods-UBRateMyProfTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,11 +120,12 @@
 			children = (
 				0213FA2D27FE464C00A578F9 /* AppDelegate.swift */,
 				0213FA2F27FE464C00A578F9 /* SceneDelegate.swift */,
-				0213FA3127FE464C00A578F9 /* ViewController.swift */,
 				0213FA3327FE464C00A578F9 /* Main.storyboard */,
 				0213FA3627FE465100A578F9 /* Assets.xcassets */,
 				0213FA3827FE465100A578F9 /* LaunchScreen.storyboard */,
 				0213FA3B27FE465100A578F9 /* Info.plist */,
+				E61091FE280640A300034630 /* ProfessorViewController.swift */,
+				E6109200280643C100034630 /* RatingCell.swift */,
 			);
 			path = UBRateMyProf;
 			sourceTree = "<group>";
@@ -164,7 +167,6 @@
 				5ACD38B82EFBE1A50A6B712D /* Pods-UBRateMyProfTests.debug.xcconfig */,
 				F8E004C129A4327A6613F18C /* Pods-UBRateMyProfTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -407,8 +409,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0213FA3227FE464C00A578F9 /* ViewController.swift in Sources */,
+				E6109201280643C100034630 /* RatingCell.swift in Sources */,
 				0213FA2E27FE464C00A578F9 /* AppDelegate.swift in Sources */,
+				E61091FF280640A300034630 /* ProfessorViewController.swift in Sources */,
 				0213FA3027FE464C00A578F9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
