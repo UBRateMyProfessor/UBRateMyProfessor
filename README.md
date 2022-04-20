@@ -158,8 +158,9 @@ query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
 ```
 
 Rating Screen:
+ <img src="https://media4.giphy.com/media/QOQEzime25L9JXFDyX/giphy.gif?cid=790b7611714dff09968cf0aafeb1ac29332d79a217168945&rid=giphy.gif" width="200" height="400">
 - POST new rating object to server for that professor
-  
+
 ```swift
         let today = Date()
         let post = PFObject(className: "Rating")
