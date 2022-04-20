@@ -27,12 +27,13 @@ App that allows students to rate their professors, and be able to see a list of 
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-* API Set up [~]
+* ~ = In Progress
+* API Set up [X]
 * User can search for professors [~]
-* User can rate professors []
+* User can rate professors [~]
 * User can see professor rating [~]
-* User can search by courses []
-* User can search by department []
+* User can search by courses [~]
+* User can search by department [~]
 
 
 **Optional Nice-to-have Stories**
@@ -63,14 +64,6 @@ App that allows students to rate their professors, and be able to see a list of 
 ## Wireframes
 <img src="https://i.imgur.com/Ae1eHv8.png](https://i.imgur.com/Ae1eHv8.png" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
-
-## Schema 
-[This section will be completed in Unit 9]
-### Models
-[Add table of models]
 
 ### Professor
 | Property       | Type       | Description                          |
