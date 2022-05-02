@@ -92,7 +92,7 @@ App that allows students to rate their professors, and be able to see a list of 
  - GET “department search” in list of professors
 ```swift
 // (Read/GET) GET “department search” in list of professors
-let query = PFQuery(className:"professor")
+let query = PFQuery(className:"Professors")
 query.whereKey("department", equalTo: departmentSearchText)
 query.order(byDescending: "Name")
 query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
@@ -100,7 +100,7 @@ query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
       print(error.localizedDescription)
    } else if let posts = posts {
       print("Successfully retrieved \(professors.count) professors.")
-      // TODO: Do something with posts...
+      // TODO: Do something with department list...
    }
 }
 ```
@@ -126,15 +126,15 @@ query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
 - GET “prof name” in list of Professors
 ```swift
 // (Read/GET) GET “name” in list of professors
-let query = PFQuery(className:"professor")
-query.whereKey("name", equalTo: nameSearch)
+let query = PFQuery(className:"Professors")
+query.whereKey("last_name", matchesText: nameSearch)
 query.order(byDescending: "Name")
 query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
    if let error = error {
       print(error.localizedDescription)
    } else if let posts = posts {
       print("Successfully retrieved \(professors.count) professors.")
-      // TODO: Do something with posts...
+      // TODO: Do something with professor list...
    }
 }
 ```
@@ -143,16 +143,16 @@ query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
 <img src="https://user-images.githubusercontent.com/14352665/163086037-ca4ac95e-af06-44d2-8282-bba503759b38.png" width="200" height="400">
 
 ```swift
-// (Read/GET) GET “rating” in list of professors
-let query = PFQuery(className:"rating")
-query.whereKey("professor", equalTo: professor)
-query.order(byDescending: "datePosted")
+// (Read/GET) GET “name” in list of professors
+let query = PFQuery(className:"Ratings")
+query.whereKey("ratemyprof_id", equalTo: professorID)
+query.order(byDescending: "createdAt")
 query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
    if let error = error {
       print(error.localizedDescription)
-   } else if let posts = posts {
-      print("Successfully retrieved \(professors.count) professors.")
-      // TODO: Do something with posts...
+   } else if let reviews = reviews {
+      print("Successfully retrieved \(reviews.count) reviews.")
+      // TODO: Do something with ratings list...
    }
 }
 ```
