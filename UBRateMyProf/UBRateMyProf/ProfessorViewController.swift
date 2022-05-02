@@ -23,7 +23,8 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 150
+        tableView.estimatedRowHeight = 160
+        tableView.rowHeight = UITableView.automaticDimension
         
     
         // Do any additional setup after loading the view.
