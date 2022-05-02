@@ -7,8 +7,12 @@
 
 import UIKit
 
-class RatingCell: UITableViewCell {
+class ReviewCell: UITableViewCell {
 
+    @IBOutlet weak var reviewTitle: UILabel!
+    @IBOutlet weak var reviewContent: UILabel!
+    @IBOutlet weak var reviewRating: UILabel!
+    @IBOutlet weak var reviewCourse: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
