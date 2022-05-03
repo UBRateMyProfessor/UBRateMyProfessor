@@ -65,6 +65,7 @@ App that allows students to rate their professors, and be able to see a list of 
 <img src="https://i.imgur.com/Ae1eHv8.png](https://i.imgur.com/Ae1eHv8.png" width=600>
 
 
+## Schema
 ### Professor
 | Property       | Type       | Description                          |
 | -------------- | ---------- | ------------------------------------ |
