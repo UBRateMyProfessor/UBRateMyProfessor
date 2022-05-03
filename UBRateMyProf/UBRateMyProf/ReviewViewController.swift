@@ -31,7 +31,7 @@ class ReviewViewController: UIViewController {
         
         formatter.dateFormat = "yy"
         let year = formatter.string(from: date)
-        formatter.dateFormat = "M"
+        formatter.dateFormat = "MM"
         let month = formatter.string(from: date)
         formatter.dateFormat = "d"
         let day = formatter.string(from: date)
