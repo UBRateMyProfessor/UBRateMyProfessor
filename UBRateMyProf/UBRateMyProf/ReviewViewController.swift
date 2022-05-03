@@ -59,20 +59,7 @@ class ReviewViewController: UIViewController {
     @IBAction func Back(_ sender: Any) {
         self.dismiss(animated: true)
     }
-    func updateProfRating(){
-        let queryProfessor = PFQuery(className:"Professors")
-        queryProfessor.whereKey("ratemyprof_id", equalTo: professorID)
-        queryProfessor.order(byDescending: "Name")
-        queryProfessor.findObjectsInBackground { [self] (professors: [PFObject]?, error: Error?) in
-           if let error = error {
-              print(error.localizedDescription)
-           }else if let professors=professors {
-               print("Successfully retrieved \(professors.count) professors.")
-               let rating = professors[0]["overall_rating"]
-               //TODO UPDATE RATING BASED ON ALL OTHER RATINGS
-           }
-        }
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Reviewing: \(professorID ?? 0)"
