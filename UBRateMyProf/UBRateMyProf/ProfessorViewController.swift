@@ -22,6 +22,8 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
     var ProfessorID : Int = 2055417
     var professorReviews = [PFObject]()
     
+    let myRefreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -29,6 +31,8 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.estimatedRowHeight = 160
         tableView.rowHeight = UITableView.automaticDimension
         
+        myRefreshControl.addTarget(self, action: #selector(getProfessor), for: .valueChanged)
+        tableView.refreshControl = myRefreshControl
     
         // Do any additional setup after loading the view.
     }
@@ -46,7 +50,7 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
         getProfessor()
     }
     
-    func getProfessor(){
+    @objc func getProfessor(){
         // (Read/GET) GET “name” in list of professors
         let queryProfessor = PFQuery(className:"Professors")
         queryProfessor.whereKey("last_name", matchesText: nameSearch)
@@ -82,6 +86,7 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
                // Save reviews
                self.professorReviews = reviews
                self.tableView.reloadData()
+               self.myRefreshControl.endRefreshing()
            }
         }
     }
