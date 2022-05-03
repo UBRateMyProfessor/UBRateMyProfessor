@@ -8,7 +8,9 @@
 import UIKit
 import Parse
 
+
 class ProfessorViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     
     @IBOutlet weak var professorName: UILabel!
     @IBOutlet weak var professorDepartment: UILabel!
@@ -52,6 +54,7 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
                self.professorName.text = "\(self.professorInfo["first_name"] ?? "firstName") \(self.professorInfo["last_name"] ?? "lastName")"
                self.professorDepartment.text = "\(self.professorInfo["department"] ?? "department")"
                self.professorRating.text = "\(self.professorInfo["overall_rating"] ?? "NA")"
+               self.professorRating.textColor = ratingColor(rating: Float( self.professorInfo["overall_rating"] as! NSNumber))
                getReviews()
            }
         }
@@ -79,6 +82,16 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
         return professorReviews.count
     }
     
+    func ratingColor(rating : Float) -> UIColor{
+        if (rating < 2) {
+            return UIColor.systemRed
+        }else if (rating < 3.5){
+            return UIColor.systemYellow
+        }else{
+            return UIColor.systemGreen
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell") as! ReviewCell
         
@@ -86,18 +99,17 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
         let title = review["rDate"] as! String
         let course = review["rClass"] as! String
         let content = review["rComments"] as! String
-        let rating = String(review["rOverall"] as! Float)
+        let rating = review["rOverall"] as! Float
         
         cell.reviewTitle.text = title
         cell.reviewCourse.text = course
         cell.reviewContent.text = content
-        cell.reviewRating.text = rating
-        
-        
+        cell.reviewRating.text = "\(rating)"
+        cell.reviewRating.textColor = ratingColor(rating: rating)
         return cell
     }
     
-    
+   
     /*
     // MARK: - Navigation
 
