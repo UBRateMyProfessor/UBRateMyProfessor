@@ -26,13 +26,24 @@ class ReviewViewController: UIViewController {
     
     @IBAction func submitButton(_ sender: Any) {
         let rating = PFObject(className: "Ratings")
+        let date = Date()
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "yy"
+        let year = formatter.string(from: date)
+        formatter.dateFormat = "M"
+        let month = formatter.string(from: date)
+        formatter.dateFormat = "d"
+        let day = formatter.string(from: date)
+        let formattedDate = "\(month)/\(day)/\(year)"
+        
         rating["ratemyprof_id"] = professorID
         rating["rClass"] = courseLabel.text!
         rating["rComments"] = reviewLabel.text!
         rating["rOverall"] = overallRating.selectedSegmentIndex+1 //(not too sure here)
         rating["rPreparedness"] = preparednessRating.selectedSegmentIndex+1
         rating["rPace"] = paceOfCourseRating.selectedSegmentIndex+1
-        
+        rating["rDate"] = formattedDate
         
         rating.saveInBackground {(success, error) in
             if success {
@@ -51,7 +62,7 @@ class ReviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.title = "Reviewing: \(professorID ?? 0)"
     
 
         // Do any additional setup after loading the view.
