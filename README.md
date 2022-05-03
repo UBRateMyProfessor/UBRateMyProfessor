@@ -139,8 +139,8 @@ query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
 }
 ```
 ### Prof Screen:
-- GET all ratings from professor in list
 <img src="https://i.imgur.com/QMlm7QL.gif" width="200" height="400">
+- GET all ratings from professor in list
 
 ```swift
 // (Read/GET) GET “name” in list of professors
