@@ -22,7 +22,7 @@
 		D2B1DE142819FD6B00A9E91A /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B1DE132819FD6B00A9E91A /* ReviewViewController.swift */; };
 		E4C90B94C72FC8107C072C40 /* Pods_UBRateMyProf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A62994746136BFFACB500B /* Pods_UBRateMyProf.framework */; };
 		E61091FF280640A300034630 /* ProfessorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61091FE280640A300034630 /* ProfessorViewController.swift */; };
-		E6109201280643C100034630 /* RatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6109200280643C100034630 /* RatingCell.swift */; };
+		E6109201280643C100034630 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6109200280643C100034630 /* ReviewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,7 @@
 		D2B1DE132819FD6B00A9E91A /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		D7047D50CB8CB6F344E674AF /* Pods_UBRateMyProf_UBRateMyProfUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UBRateMyProf_UBRateMyProfUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61091FE280640A300034630 /* ProfessorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorViewController.swift; sourceTree = "<group>"; };
-		E6109200280643C100034630 /* RatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCell.swift; sourceTree = "<group>"; };
+		E6109200280643C100034630 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		EBC76CAC36150422A6146235 /* Pods-UBRateMyProf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProf.release.xcconfig"; path = "Target Support Files/Pods-UBRateMyProf/Pods-UBRateMyProf.release.xcconfig"; sourceTree = "<group>"; };
 		F8E004C129A4327A6613F18C /* Pods-UBRateMyProfTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBRateMyProfTests.release.xcconfig"; path = "Target Support Files/Pods-UBRateMyProfTests/Pods-UBRateMyProfTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
