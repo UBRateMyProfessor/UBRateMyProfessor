@@ -19,6 +19,7 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
     
     let nameSearch : String =  "Hartloff"
     var professorInfo : PFObject!
+    var ProfessorID : Int = 2055417
     var professorReviews = [PFObject]()
     
     override func viewDidLoad() {
@@ -31,6 +32,13 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
     
         // Do any additional setup after loading the view.
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "leaveRatingSegue"  {
+            var page = segue.destination as? ReviewViewController
+            page!.professorID = self.ProfessorID
+        }
+    }
+       
     
     override func viewDidAppear(_ animated: Bool){
         super.viewDidAppear(animated)

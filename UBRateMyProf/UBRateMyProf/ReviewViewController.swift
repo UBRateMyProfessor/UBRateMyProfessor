@@ -10,7 +10,8 @@ import Parse
 
 class ReviewViewController: UIViewController {
     
-    @IBOutlet weak var professorID: UINavigationItem!
+    var professorID: Int!
+    
     @IBOutlet weak var courseLabel: UITextField!
     
     @IBOutlet weak var reviewLabel: UITextField!
@@ -25,7 +26,7 @@ class ReviewViewController: UIViewController {
     
     @IBAction func submitButton(_ sender: Any) {
         let rating = PFObject(className: "Ratings")
-        rating["ratemyprof_id"] = professorID.title
+        rating["ratemyprof_id"] = professorID
         rating["rClass"] = courseLabel.text!
         rating["rComments"] = reviewLabel.text!
         rating["rOverall"] = overallRating.selectedSegmentIndex+1 //(not too sure here)
@@ -44,6 +45,9 @@ class ReviewViewController: UIViewController {
         }
     }
     
+    @IBAction func Back(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

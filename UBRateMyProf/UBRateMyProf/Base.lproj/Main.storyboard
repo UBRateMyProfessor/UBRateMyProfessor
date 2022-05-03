@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Professor-->
+        <!--Professor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController modalPresentationStyle="currentContext" id="BYZ-38-t0r" customClass="ProfessorViewController" customModule="UBRateMyProf" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,7 +105,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="GU0-0z-ZaA" userLabel="ProfessorInfo">
-                                <rect key="frame" x="87" y="54" width="240" height="154"/>
+                                <rect key="frame" x="87" y="158" width="240" height="154"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Professor's Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNQ-1k-Mr7">
                                         <rect key="frame" x="29" y="0.0" width="182" height="29"/>
@@ -154,11 +154,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="GU0-0z-ZaA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="NJR-YU-dFy"/>
-                            <constraint firstItem="GU0-0z-ZaA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ke8-VZ-v71"/>
+                            <constraint firstItem="GU0-0z-ZaA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="ke8-VZ-v71"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GU0-0z-ZaA" secondAttribute="trailing" constant="87" id="mGp-uZ-MWg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Professor" id="yXa-eK-bM5"/>
+                    <navigationItem key="navigationItem" id="3Sv-IQ-lf3">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="M7g-Zq-dx2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="e4b-dN-BOU">
+                            <connections>
+                                <segue destination="g3m-JZ-KoJ" kind="presentation" identifier="leaveRatingSegue" id="YLu-Ym-hYB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="professorDepartment" destination="kVe-74-5a6" id="Lbe-FA-uFY"/>
                         <outlet property="professorName" destination="HNQ-1k-Mr7" id="XPw-fO-x5u"/>
@@ -193,7 +200,7 @@
             <objects>
                 <viewController id="g3m-JZ-KoJ" customClass="ReviewViewController" customModule="UBRateMyProf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dnT-xh-LhA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaZ-r3-9h5">
@@ -275,7 +282,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Submit"/>
                                 <connections>
                                     <action selector="submitButton:" destination="g3m-JZ-KoJ" eventType="touchUpInside" id="qyM-wB-z3j"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="OoZ-El-vs7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Overall Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Oh-HZ-ADM">
@@ -290,19 +296,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZM-7V-F0I">
-                                <rect key="frame" x="0.0" y="34" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Reviewing: Professor" id="zak-Dk-m7C">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="w2s-BA-RKU"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="CSE 115" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-0O-6Pi">
                                 <rect key="frame" x="154" y="219" width="211" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZM-7V-F0I">
+                                <rect key="frame" x="-2" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Reviewing: Professor" id="zak-Dk-m7C">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="w2s-BA-RKU">
+                                            <connections>
+                                                <action selector="Back:" destination="g3m-JZ-KoJ" id="7Z9-nn-bGm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bJu-qM-oxa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -348,13 +358,12 @@
                         <outlet property="overallRating" destination="psH-Hf-r9D" id="9FT-1r-Ed6"/>
                         <outlet property="paceOfCourseRating" destination="31p-ad-SJA" id="41K-vh-vqE"/>
                         <outlet property="preparednessRating" destination="cMp-dc-15j" id="plg-Uh-rfr"/>
-                        <outlet property="professorID" destination="zak-Dk-m7C" id="5d8-cm-Ozr"/>
                         <outlet property="reviewLabel" destination="c7P-th-Jfw" id="Srs-Fc-ehS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSa-4W-L0c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="643" y="29"/>
+            <point key="canvasLocation" x="684" y="29"/>
         </scene>
         <!--Professor Screens View Controller-->
         <scene sceneID="xbI-Bv-qkQ">
@@ -570,10 +579,8 @@
             <point key="canvasLocation" x="-2161" y="672"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="OoZ-El-vs7"/>
-    </inferredMetricsTieBreakers>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
