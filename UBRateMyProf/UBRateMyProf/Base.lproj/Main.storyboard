@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g3m-JZ-KoJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -344,10 +344,10 @@
                     </view>
                     <connections>
                         <outlet property="courseLabel" destination="BTU-0O-6Pi" id="fg2-lv-i7G"/>
-                        <outlet property="difficultyRating" destination="IdF-3h-aOR" id="vUP-6l-gBO"/>
-                        <outlet property="overallRating" destination="8e1-qd-2ya" id="UAu-wJ-Rif"/>
+                        <outlet property="difficultyRating" destination="yYg-V6-3Rr" id="bkN-OF-eQE"/>
+                        <outlet property="overallRating" destination="psH-Hf-r9D" id="9FT-1r-Ed6"/>
                         <outlet property="paceOfCourseRating" destination="31p-ad-SJA" id="41K-vh-vqE"/>
-                        <outlet property="preparednessRating" destination="fpI-jb-m5t" id="M3J-JE-UJf"/>
+                        <outlet property="preparednessRating" destination="cMp-dc-15j" id="plg-Uh-rfr"/>
                         <outlet property="professorID" destination="zak-Dk-m7C" id="5d8-cm-Ozr"/>
                         <outlet property="reviewLabel" destination="c7P-th-Jfw" id="Srs-Fc-ehS"/>
                     </connections>

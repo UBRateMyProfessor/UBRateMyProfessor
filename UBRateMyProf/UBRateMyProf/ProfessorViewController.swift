@@ -54,7 +54,7 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
                self.professorName.text = "\(self.professorInfo["first_name"] ?? "firstName") \(self.professorInfo["last_name"] ?? "lastName")"
                self.professorDepartment.text = "\(self.professorInfo["department"] ?? "department")"
                self.professorRating.text = "\(self.professorInfo["overall_rating"] ?? "NA")"
-               self.professorRating.textColor = ratingColor(rating: Float( self.professorInfo["overall_rating"] as! NSNumber))
+               self.professorRating.textColor = ratingColor(rating: Float( truncating: self.professorInfo["overall_rating"] as! NSNumber))
                getReviews()
            }
         }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class ReviewViewController: UIViewController {
     
@@ -14,22 +15,22 @@ class ReviewViewController: UIViewController {
     
     @IBOutlet weak var reviewLabel: UITextField!
     
-    @IBOutlet weak var difficultyRating: NSLayoutConstraint!
+    @IBOutlet weak var difficultyRating: UISegmentedControl!
     
-    @IBOutlet weak var preparednessRating: NSLayoutConstraint!
+    @IBOutlet weak var preparednessRating: UISegmentedControl!
     
     @IBOutlet weak var paceOfCourseRating: UISegmentedControl!
     
-    @IBOutlet weak var overallRating: NSLayoutConstraint!
+    @IBOutlet weak var overallRating: UISegmentedControl!
     
     @IBAction func submitButton(_ sender: Any) {
-        let rating = PFObject(ReviewViewController: "Ratings")
+        let rating = PFObject(className: "Ratings")
         rating["ratemyprof_id"] = professorID.title
         rating["rClass"] = courseLabel.text!
         rating["rComments"] = reviewLabel.text!
-        rating["rOverall"] = overallRating.value //(not too sure here)
-        rating["rPreparedness"] = preparednessRating.value
-        rating["rPace"] = paceOfCourseRating.value
+        rating["rOverall"] = overallRating.selectedSegmentIndex+1 //(not too sure here)
+        rating["rPreparedness"] = preparednessRating.selectedSegmentIndex+1
+        rating["rPace"] = paceOfCourseRating.selectedSegmentIndex+1
         
         
         rating.saveInBackground {(success, error) in
