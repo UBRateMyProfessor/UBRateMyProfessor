@@ -31,12 +31,14 @@ class ReviewViewController: UIViewController {
         
         formatter.dateFormat = "yy"
         let year = formatter.string(from: date)
-        formatter.dateFormat = "MM"
+        formatter.dateFormat = "M"
         let month = formatter.string(from: date)
         formatter.dateFormat = "d"
         let day = formatter.string(from: date)
         let formattedDate = "\(month)/\(day)/\(year)"
         
+
+
         rating["ratemyprof_id"] = professorID
         rating["rClass"] = courseLabel.text!
         rating["rComments"] = reviewLabel.text!

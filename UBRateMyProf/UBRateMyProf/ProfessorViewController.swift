@@ -73,7 +73,7 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
         // (Read/GET) GET “name” in list of professors
         let queryReviews = PFQuery(className:"Ratings")
         queryReviews.whereKey("ratemyprof_id", equalTo: self.professorInfo["ratemyprof_id"] ?? 0)
-        queryReviews.order(byDescending: "Date")
+        queryReviews.order(byDescending: "createdAt")
         queryReviews.findObjectsInBackground { (reviews: [PFObject]?, error: Error?) in
            if let error = error {
               print(error.localizedDescription)
