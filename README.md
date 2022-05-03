@@ -140,7 +140,7 @@ query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
 ```
 ### Prof Screen:
 - GET all ratings from professor in list
-<img src="https://user-images.githubusercontent.com/14352665/163086037-ca4ac95e-af06-44d2-8282-bba503759b38.png" width="200" height="400">
+<img src="https://i.imgur.com/QMlm7QL.gif" width="200" height="400">
 
 ```swift
 // (Read/GET) GET “name” in list of professors
@@ -158,23 +158,29 @@ query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
 ```
 
 Rating Screen:
- <img src="https://media4.giphy.com/media/QOQEzime25L9JXFDyX/giphy.gif?cid=790b7611714dff09968cf0aafeb1ac29332d79a217168945&rid=giphy.gif" width="200" height="400">
+ <img src="https://i.imgur.com/I0lNwBp.gif" width="200" height="400">
 - POST new rating object to server for that professor
 
 ```swift
-        let today = Date()
-        let post = PFObject(className: "Rating")
-        let rating = Rating()   
-        post["dateUploaded"] = today
-        post["caption"] = commentField.text!
-        post["rating"] = overallRating.value!
+        let rating = PFObject(className: "Ratings")
+        let date = Date()
+        let formatter = DateFormatter()
+        //Formatter Args
         
-        post.saveInBackground {(success, error) in
+        rating["ratemyprof_id"] = professorID
+        rating["rClass"] = courseLabel.text!
+        rating["rComments"] = reviewLabel.text!
+        rating["rOverall"] = overallRating.selectedSegmentIndex+1 //(not too sure here)
+        rating["rPreparedness"] = preparednessRating.selectedSegmentIndex+1
+        rating["rPace"] = paceOfCourseRating.selectedSegmentIndex+1
+        rating["rDate"] = formattedDate
+        
+        rating.saveInBackground {(success, error) in
             if success {
-                print("Saved post successfully")
+                print("Saved rating successfully")
                 self.dismiss(animated: true, completion: nil)
             } else {
-                print("Error saving post: \(String(describing: error?.localizedDescription))")
+                print("Error saving rating: \(String(describing: error?.localizedDescription))")
             }
             
         }
