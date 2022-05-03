@@ -139,7 +139,8 @@ query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
 }
 ```
 ### Prof Screen:
-<img src="https://i.imgur.com/QMlm7QL.gif" width="200" height="400">
+
+  <img src="https://media3.giphy.com/media/Auf6HIiCQ3TKYHdqir/giphy.gif?cid=790b761117a0e246f37a61baaa48c20fd4897a65e18bc881&rid=giphy.gif&ct=g" width="200" height="400">
 - GET all ratings from professor in list
 
 ```swift
@@ -157,7 +158,8 @@ query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
 }
 ```
 
-Rating Screen:
+### Rating Screen:
+
  <img src="https://i.imgur.com/I0lNwBp.gif" width="200" height="400">
 - POST new rating object to server for that professor
 
