@@ -3,6 +3,8 @@ Original App Design Project - UBRateMyProfessor
 
 # UB Rate My Professor
 
+<img src="https://media3.giphy.com/media/2g5F2Ql6mycr59gyxg/giphy.gif?cid=790b76112b441d5107fd3c7d364b894fbe95e1620c3f2707&rid=giphy.gif&ct=g" width="200" height="400">
+
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
