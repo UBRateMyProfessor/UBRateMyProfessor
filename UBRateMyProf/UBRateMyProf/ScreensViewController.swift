@@ -11,13 +11,28 @@ import Parse
 class ScreensViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var professors = [PFObject]()
-    
+    var profID = 0
+    var profName = "NULL"
     @IBOutlet weak var professorSearchBar: UISearchBar!
     
     
     @IBOutlet weak var professorTableView: UITableView!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationNavigationController = segue.destination as! UINavigationController
+        let targetController = destinationNavigationController.viewControllers[0] as! ProfessorViewController
+        
+        targetController.ProfessorID = profID
+        targetController.nameSearch = profName
+        
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        profID = professors[indexPath.row]["ratemyprof_id"] as! Int
+        profName = "\(professors[indexPath.row]["first_name"] ?? "") \(professors[indexPath.row]["last_name"] ?? "")"
+        performSegue(withIdentifier: "professorViewSegue", sender: self)
+    }
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell") as! HeaderTableViewCell

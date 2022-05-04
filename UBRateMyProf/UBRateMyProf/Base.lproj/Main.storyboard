@@ -162,7 +162,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Sv-IQ-lf3">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="M7g-Zq-dx2"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="M7g-Zq-dx2">
+                            <connections>
+                                <action selector="closeView:" destination="BYZ-38-t0r" id="xV0-3A-tfM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="e4b-dN-BOU">
                             <connections>
                                 <segue destination="g3m-JZ-KoJ" kind="presentation" identifier="leaveRatingSegue" id="YLu-Ym-hYB"/>
@@ -183,7 +187,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Ni9-T6-sJw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zaf-SA-kd7" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="zaf-SA-kd7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xuq-Ws-Rd8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -418,7 +422,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Professor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkr-vR-ZUo">
-                                                    <rect key="frame" x="20" y="11" width="123" height="33"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -451,6 +455,7 @@
                     <connections>
                         <outlet property="professorSearchBar" destination="vHA-4Z-kEN" id="Q64-kx-x1u"/>
                         <outlet property="professorTableView" destination="PTn-Oq-LVr" id="KIP-q3-wqH"/>
+                        <segue destination="zaf-SA-kd7" kind="presentation" identifier="professorViewSegue" id="Z2V-oP-gZT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdw-H7-Jli" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

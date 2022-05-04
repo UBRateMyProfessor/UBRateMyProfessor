@@ -17,7 +17,7 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var professorRating: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    let nameSearch : String =  "Hartloff"
+    var nameSearch : String =  "Hartloff"
     var professorInfo : PFObject!
     var ProfessorID : Int = 2055417
     var professorReviews = [PFObject]()
@@ -26,6 +26,8 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(nameSearch)
+        print(ProfessorID)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 160
@@ -123,6 +125,9 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
    
+    @IBAction func closeView(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     /*
     // MARK: - Navigation
 
