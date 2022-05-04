@@ -29,6 +29,7 @@ App that allows students to rate their professors, and be able to see a list of 
 **Required Must-have Stories**
 * ~ = In Progress
 * API Set up [X]
+* User can see list of professor [X]
 * User can search for professors [~]
 * User can rate professors [X]
 * User can see professor rating [X]
