@@ -283,10 +283,10 @@
             </objects>
             <point key="canvasLocation" x="684" y="29"/>
         </scene>
-        <!--Professor Screens View Controller-->
+        <!--Screens View Controller-->
         <scene sceneID="xbI-Bv-qkQ">
             <objects>
-                <viewController id="OHS-dn-tct" customClass="ProfessorScreensViewController" sceneMemberID="viewController">
+                <viewController id="OHS-dn-tct" customClass="ScreensViewController" customModule="UBRateMyProf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EYp-GI-E67">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -296,7 +296,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="48" id="jl4-9D-S7f">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="48" id="jl4-9D-S7f" customClass="HeaderTableViewCell" customModule="UBRateMyProf" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jl4-9D-S7f" id="5N5-Fc-mzi">
@@ -313,8 +313,11 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="professorHeader" destination="7mB-VR-Dbu" id="Jcz-vw-n4D"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Gxz-Pz-2g0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Gxz-Pz-2g0" customClass="NameTableViewCell" customModule="UBRateMyProf" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gxz-Pz-2g0" id="gfK-9e-Cuu">
@@ -330,6 +333,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="professorName" destination="xkr-vR-ZUo" id="weH-2v-1sc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -349,10 +355,17 @@
                         <viewLayoutGuide key="safeArea" id="cT6-Hc-a1z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="professorInitialHeader" destination="7mB-VR-Dbu" id="EUb-S3-NUD"/>
+                        <outlet property="professorLabel" destination="S8c-Vs-lcV" id="SbT-hz-pAG"/>
+                        <outlet property="professorNameLabel" destination="xkr-vR-ZUo" id="z75-8z-Z2f"/>
+                        <outlet property="professorSearchBar" destination="vHA-4Z-kEN" id="Q64-kx-x1u"/>
+                        <outlet property="professorTableView" destination="PTn-Oq-LVr" id="KIP-q3-wqH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdw-H7-Jli" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2161" y="-613"/>
+            <point key="canvasLocation" x="-2162.3188405797105" y="-613.39285714285711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pCd-mI-8sp">
