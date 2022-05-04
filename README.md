@@ -3,6 +3,8 @@ Original App Design Project - UBRateMyProfessor
 
 # UB Rate My Professor
 
+<img src="https://media3.giphy.com/media/2g5F2Ql6mycr59gyxg/giphy.gif?cid=790b76112b441d5107fd3c7d364b894fbe95e1620c3f2707&rid=giphy.gif&ct=g" width="200" height="400">
+
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
@@ -29,6 +31,7 @@ App that allows students to rate their professors, and be able to see a list of 
 **Required Must-have Stories**
 * ~ = In Progress
 * API Set up [X]
+* User can see list of professor [X]
 * User can search for professors [~]
 * User can rate professors [X]
 * User can see professor rating [X]
@@ -65,6 +68,7 @@ App that allows students to rate their professors, and be able to see a list of 
 <img src="https://i.imgur.com/Ae1eHv8.png](https://i.imgur.com/Ae1eHv8.png" width=600>
 
 
+## Schema
 ### Professor
 | Property       | Type       | Description                          |
 | -------------- | ---------- | ------------------------------------ |
