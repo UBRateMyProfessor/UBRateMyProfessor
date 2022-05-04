@@ -25,22 +25,7 @@ class HeaderTableViewCell: UITableViewCell {
     }
     
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell") as! ReviewCell
-//
-//        let review = self.professorReviews[indexPath.row]
-//        let title = review["rDate"] as! String
-//        let course = review["rClass"] as! String
-//        let content = review["rComments"] as! String
-//        let rating = review["rOverall"] as! Float
-//
-//        cell.reviewTitle.text = title
-//        cell.reviewCourse.text = course
-//        cell.reviewContent.text = content
-//        cell.reviewRating.text = "\(rating)"
-//        cell.reviewRating.textColor = ratingColor(rating: rating)
-//        return cell
-    }
+   
     
     
     

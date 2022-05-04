@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zaf-SA-kd7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OHS-dn-tct">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -389,7 +389,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="48" id="jl4-9D-S7f" customClass="HeaderTableViewCell" customModule="UBRateMyProf" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderTableViewCell" rowHeight="48" id="jl4-9D-S7f" customClass="HeaderTableViewCell" customModule="UBRateMyProf" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jl4-9D-S7f" id="5N5-Fc-mzi">
@@ -410,7 +410,7 @@
                                             <outlet property="professorHeader" destination="7mB-VR-Dbu" id="Jcz-vw-n4D"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Gxz-Pz-2g0" customClass="NameTableViewCell" customModule="UBRateMyProf" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NameTableViewCell" id="Gxz-Pz-2g0" customClass="NameTableViewCell" customModule="UBRateMyProf" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gxz-Pz-2g0" id="gfK-9e-Cuu">
@@ -449,9 +449,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="professorInitialHeader" destination="7mB-VR-Dbu" id="EUb-S3-NUD"/>
-                        <outlet property="professorLabel" destination="S8c-Vs-lcV" id="SbT-hz-pAG"/>
-                        <outlet property="professorNameLabel" destination="xkr-vR-ZUo" id="z75-8z-Z2f"/>
                         <outlet property="professorSearchBar" destination="vHA-4Z-kEN" id="Q64-kx-x1u"/>
                         <outlet property="professorTableView" destination="PTn-Oq-LVr" id="KIP-q3-wqH"/>
                     </connections>
