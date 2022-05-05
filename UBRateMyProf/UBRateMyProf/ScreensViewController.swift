@@ -75,6 +75,11 @@ class ScreensViewController: UIViewController, UITableViewDataSource, UITableVie
                    print("Successfully retrieved \(professor.count) professors.")
                    self.professorTableView.reloadData()
                    print("Successfully retrieved TOTAL: \(self.professors.count) professors.")
+                   self.professors = self.professors.sorted { (prof1, prof2) -> Bool in
+                               let profName1 = prof1["last_name"] as! String
+                               let profName2 = prof2["last_name"] as! String
+                               return (profName1.localizedCaseInsensitiveCompare(profName2) == .orderedAscending)
+                   }
                }
            }
         }
