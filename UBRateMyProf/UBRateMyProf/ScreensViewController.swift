@@ -94,7 +94,6 @@ class ScreensViewController: UIViewController, UITableViewDataSource, UITableVie
                } else if let professor = professor {
                    self.professors.append(contentsOf: professor)
                    print("Successfully retrieved \(professor.count) professors.")
-                   self.professorTableView.reloadData()
                    print("Successfully retrieved TOTAL: \(self.professors.count) professors.")
                    self.professors = self.professors.sorted { (prof1, prof2) -> Bool in
                                let profName1 = prof1["last_name"] as! String
@@ -102,6 +101,7 @@ class ScreensViewController: UIViewController, UITableViewDataSource, UITableVie
                                return (profName1.localizedCaseInsensitiveCompare(profName2) == .orderedAscending)
                    }
                    self.professorsSearchResults = self.professors
+                   self.professorTableView.reloadData()
                }
            }
         }
