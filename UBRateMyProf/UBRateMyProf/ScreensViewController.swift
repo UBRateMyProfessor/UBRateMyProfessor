@@ -60,7 +60,7 @@ class ScreensViewController: UIViewController, UITableViewDataSource, UITableVie
            }
         }
     }
-    func getProfessor(index: Int = 0){
+    func getProfessor(){
         //query.whereKey("last_name", matchesText: professorSearchBar.text ?? "") //OMIT THIS IF JUST PULLING ALL PROFS
         self.professors = []
         for char in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" {
