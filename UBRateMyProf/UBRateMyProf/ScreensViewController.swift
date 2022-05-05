@@ -62,6 +62,7 @@ class ScreensViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     func getProfessor(index: Int = 0){
         //query.whereKey("last_name", matchesText: professorSearchBar.text ?? "") //OMIT THIS IF JUST PULLING ALL PROFS
+        self.professors = []
         for char in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" {
          let query = PFQuery(className:"Professors")
             query.limit = 1000
