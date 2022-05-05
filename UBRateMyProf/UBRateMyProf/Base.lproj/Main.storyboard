@@ -436,7 +436,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vHA-4Z-kEN">
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search Professor" translatesAutoresizingMaskIntoConstraints="NO" id="vHA-4Z-kEN">
                                 <rect key="frame" x="0.0" y="74" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>

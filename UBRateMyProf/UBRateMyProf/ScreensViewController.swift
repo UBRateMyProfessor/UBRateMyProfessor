@@ -8,15 +8,33 @@
 import UIKit
 import Parse
 
-class ScreensViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ScreensViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate{
+    
     
     var professors = [PFObject]()
     var profID = 0
     var profName = "NULL"
+    
+    var professorsSearchResults = [PFObject]()
+    
     @IBOutlet weak var professorSearchBar: UISearchBar!
     
     
     @IBOutlet weak var professorTableView: UITableView!
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        professorsSearchResults = []
+        if searchText == ""{
+            professorsSearchResults = professors
+        }else{
+            for professor in professors {
+                if String("\(professor["first_name"]) \(professor["last_name"])").lowercased().contains(searchText.lowercased()){
+                    professorsSearchResults.append(professor)
+                }
+            }
+        }
+        self.professorTableView.reloadData()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationNavigationController = segue.destination as! UINavigationController
@@ -28,8 +46,8 @@ class ScreensViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        profID = professors[indexPath.row]["ratemyprof_id"] as! Int
-        profName = "\(professors[indexPath.row]["first_name"] ?? "") \(professors[indexPath.row]["last_name"] ?? "")"
+        profID = professorsSearchResults[indexPath.row]["ratemyprof_id"] as! Int
+        profName = "\(professorsSearchResults[indexPath.row]["first_name"] ?? "") \(professorsSearchResults[indexPath.row]["last_name"] ?? "")"
         performSegue(withIdentifier: "professorViewSegue", sender: self)
     }
 
@@ -38,7 +56,7 @@ class ScreensViewController: UIViewController, UITableViewDataSource, UITableVie
         let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell") as! HeaderTableViewCell
         let nameCell = tableView.dequeueReusableCell(withIdentifier: "NameTableViewCell") as! NameTableViewCell
         
-        let name = "\( self.professors[indexPath.row]["first_name"] ?? "") \(self.professors[indexPath.row]["last_name"] ?? "")"
+        let name = "\( self.professorsSearchResults[indexPath.row]["first_name"] ?? "") \(self.professorsSearchResults[indexPath.row]["last_name"] ?? "")"
         nameCell.professorName.text = name
         return nameCell
     }
@@ -60,6 +78,8 @@ class ScreensViewController: UIViewController, UITableViewDataSource, UITableVie
            }
         }
     }
+
+    
     func getProfessor(){
         //query.whereKey("last_name", matchesText: professorSearchBar.text ?? "") //OMIT THIS IF JUST PULLING ALL PROFS
         self.professors = []
@@ -81,15 +101,14 @@ class ScreensViewController: UIViewController, UITableViewDataSource, UITableVie
                                let profName2 = prof2["last_name"] as! String
                                return (profName1.localizedCaseInsensitiveCompare(profName2) == .orderedAscending)
                    }
+                   self.professorsSearchResults = self.professors
                }
            }
         }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return professors.count
-        }
-    
-    
+        return self.professorsSearchResults.count
+    }
     
     
     
@@ -101,15 +120,17 @@ class ScreensViewController: UIViewController, UITableViewDataSource, UITableVie
         professorTableView.delegate = self
         professorTableView.estimatedRowHeight = 80
         professorTableView.rowHeight = UITableView.automaticDimension
+        
+        professorSearchBar.delegate = self
 
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool){
-            super.viewDidAppear(animated)
-            // Get professor info and reviews
-            getProfessor()
-        }
+        super.viewDidAppear(animated)
+        // Get professor info and reviews
+        getProfessor()
+        professorSearchBar.text = ""
+    }
 
     /*
     // MARK: - Navigation
