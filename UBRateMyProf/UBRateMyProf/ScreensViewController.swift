@@ -43,10 +43,12 @@ class ScreensViewController: UIViewController, UITableViewDataSource, UITableVie
         return nameCell
     }
     
-    func getProfessor(){
+    func searchProfessor(){
         let query = PFQuery(className:"Professors")
         //query.whereKey("last_name", matchesText: professorSearchBar.text ?? "") //OMIT THIS IF JUST PULLING ALL PROFS
         query.order(byAscending: "last_name")
+        query.limit = 1000;
+        query.whereKey("last_name", contains: professorSearchBar.text)
         query.findObjectsInBackground { (professor: [PFObject]?, error: Error?) in
            if let error = error {
               print(error.localizedDescription)
@@ -58,7 +60,29 @@ class ScreensViewController: UIViewController, UITableViewDataSource, UITableVie
            }
         }
     }
-    
+    func getProfessor(index: Int = 0){
+        var skip = 0
+        let query = PFQuery(className:"Professors")
+        //query.whereKey("last_name", matchesText: professorSearchBar.text ?? "") //OMIT THIS IF JUST PULLING ALL PROFS
+        query.order(byAscending: "last_name")
+        query.limit = 1000;
+        query.findObjectsInBackground { (professor: [PFObject]?, error: Error?) in
+           if let error = error {
+              print(error.localizedDescription)
+           } else if let professor = professor {
+               self.professors.append(contentsOf: professor)
+               skip+=professor.count
+               if professor.count == 1000 && professor[0].objectId != nil
+               {
+                   self.getProfessor(index: skip)
+               }
+               print("Successfully retrieved \(self.professors.count) professors.")
+               
+              // TODO: Do something with professor list...
+               self.professorTableView.reloadData()
+           }
+        }
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return professors.count
         }
