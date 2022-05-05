@@ -40,7 +40,7 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "leaveRatingSegue"  {
-            var page = segue.destination as? ReviewViewController
+            let page = segue.destination as? ReviewViewController
             page!.professorID = self.ProfessorID
         }
     }
