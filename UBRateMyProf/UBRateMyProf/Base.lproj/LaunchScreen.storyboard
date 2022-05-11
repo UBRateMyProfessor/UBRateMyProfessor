@@ -15,16 +15,28 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Launch Screen" translatesAutoresizingMaskIntoConstraints="NO" id="4Mq-8X-hQU">
+                                <rect key="frame" x="-18" y="-4" width="440" height="955"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4Mq-8X-hQU" secondAttribute="bottom" constant="-55" id="9Rv-GU-8ZI"/>
+                            <constraint firstAttribute="trailing" secondItem="4Mq-8X-hQU" secondAttribute="trailing" constant="-8" id="ESz-r7-8kX"/>
+                            <constraint firstItem="4Mq-8X-hQU" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="-4" id="KoD-Oi-fuL"/>
+                            <constraint firstItem="4Mq-8X-hQU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-18" id="Xq2-sj-1Xy"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Launch Screen" width="1125" height="2436"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
