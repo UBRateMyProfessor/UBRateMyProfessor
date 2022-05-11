@@ -37,8 +37,8 @@ class ReviewViewController: UIViewController {
         let day = formatter.string(from: date)
         let formattedDate = "\(month)/\(day)/\(year)"
         
-
-
+        
+        
         rating["ratemyprof_id"] = professorID
         rating["rClass"] = courseLabel.text!
         rating["rComments"] = reviewLabel.text!
@@ -50,6 +50,7 @@ class ReviewViewController: UIViewController {
         rating.saveInBackground {(success, error) in
             if success {
                 print("Saved rating successfully")
+                self.UpdateRating()
                 self.dismiss(animated: true, completion: nil)
             } else {
                 print("Error saving rating: \(String(describing: error?.localizedDescription))")
@@ -62,23 +63,55 @@ class ReviewViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
+    func UpdateRating(){
+        let queryReviews = PFQuery(className:"Ratings")
+        queryReviews.whereKey("ratemyprof_id", equalTo: self.professorID ?? 0)
+        queryReviews.findObjectsInBackground { (reviews: [PFObject]?, error: Error?) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let reviews = reviews {
+                print("Successfully retrieved \(reviews.count) reviews.")
+                var sum = 0;
+                for x in reviews {
+                    sum += x.value(forKey: "rOverall") as! Int
+                }
+                let average = Float(sum) / Float(reviews.count)
+                print("average is \(average)")
+                let queryProfessor = PFQuery(className:"Professors")
+                queryProfessor.whereKey("ratemyprof_id", equalTo: self.professorID ?? 0)
+                queryProfessor.findObjectsInBackground { [self] (professors: [PFObject]?, error: Error?) in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    }else if let professors=professors {
+                        print("Successfully retrieved \(professors.count) professors.")
+                        for x in professors {
+                            x.setValue(average, forKey: "overall_rating")
+                            x.saveEventually()
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Reviewing: \(professorID ?? 0)"
-    
-
+        self.navigationItem.title = "Reviewing: \(self.professorID ?? 0)"
+        
+        
         // Do any additional setup after loading the view.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

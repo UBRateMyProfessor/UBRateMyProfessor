@@ -450,7 +450,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cT6-Hc-a1z"/>
-                        <color key="backgroundColor" red="0.93468662075229458" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="professorSearchBar" destination="vHA-4Z-kEN" id="Q64-kx-x1u"/>
