@@ -67,7 +67,7 @@ class ProfessorViewController: UIViewController, UITableViewDataSource, UITableV
                // Update with professor's details
                self.professorName.text = "\(self.professorInfo["first_name"] ?? "firstName") \(self.professorInfo["last_name"] ?? "lastName")"
                self.professorDepartment.text = "\(self.professorInfo["department"] ?? "department")"
-               self.professorRating.text = String(format: "%.2f", self.professorInfo["overall_rating"] as! Float)
+               self.professorRating.text = String(format: "%.2f", Float( truncating: self.professorInfo["overall_rating"] as! NSNumber))
                self.professorRating.textColor = ratingColor(rating: Float( truncating: self.professorInfo["overall_rating"] as! NSNumber))
                getReviews()
            }
