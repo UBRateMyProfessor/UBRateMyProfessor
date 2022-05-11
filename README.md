@@ -32,11 +32,11 @@ App that allows students to rate their professors, and be able to see a list of 
 * ~ = In Progress
 * API Set up [X]
 * User can see list of professor [X]
-* User can search for professors [~]
+* User can search for professors [X]
 * User can rate professors [X]
 * User can see professor rating [X]
-* User can search by courses [~]
-* User can search by department [~]
+~~* User can search by courses [~]~~
+~~* User can search by department [~]~~
 
 
 **Optional Nice-to-have Stories**
