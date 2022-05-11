@@ -131,8 +131,12 @@ class ScreensViewController: UIViewController, UITableViewDataSource, UITableVie
         // Get professor info and reviews
         getProfessor()
         //professorSearchBar.text = ""
+        let tapGesture = UISwipeGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
     }
-
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        professorSearchBar.resignFirstResponder()
+    }
     /*
     // MARK: - Navigation
 
