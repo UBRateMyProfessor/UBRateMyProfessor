@@ -98,11 +98,25 @@ class ReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Reviewing: \(self.professorID ?? 0)"
-        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
         
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil);
+        }
+
+        @objc func keyboardWillShow() {
+             self.view.frame.origin.y = -150 // Move view 150 points upward
+        }
+
+        @objc func keyboardWillHide() {
+             self.view.frame.origin.y = 0 // Move view to original position
+        }
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        reviewLabel.resignFirstResponder()
+        courseLabel.resignFirstResponder()
     }
-    
     
     /*
      // MARK: - Navigation
